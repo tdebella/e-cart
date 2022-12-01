@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "quantity": 0,
+    "name": "iphone 14 pro",
+    "price": 2500,
+    "year": 2022,
+    "img": "/imgs/iph14pro.png"
+  },
+  {
+    "id": 2,
+    "quantity": 0,
+    "name": "iphone 14 pro max",
+    "price": 2700,
+    "year": 2022,
+    "img": "/imgs/iph14max.png"
+  },
+  {
+    "id": 3,
+    "quantity": 0,
+    "name": "iphone 13 pro",
+    "price": 2200,
+    "year": 2021,
+    "img": "/imgs/iph13pro.png"
+  },
+
+  {
+    "id": 4,
+    "quantity": 0,
+    "name": "iphone 13 pro max",
+    "price": 2400,
+    "year": 2021,
+    "img": "/imgs/iph13max.png"
+  },
+  {
+    "id": 5,
+    "quantity": 0,
+    "name": "iphone 12 pro",
+    "price": 1800,
+    "year": 2020,
+    "img": "/imgs/iph12pro.png"
+  },
+  {
+    "id": 6,
+    "quantity": 0,
+    "name": "iphone 12 pro max",
+    "price": 2100,
+    "year": 2020,
+    "img": "/imgs/iph12max.png"
+  }
+]
