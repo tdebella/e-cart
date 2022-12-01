@@ -37,7 +37,7 @@ Tesfaye Robelle - Software Engineer
   - TypeScript
   - Semantic HTML5
   - Bootstrap, react-bootstrap
-  - [React Router](https://reactrouter.com/)
+  - React Router
   - [React Hooks]
   - Firebase
   - MongoDB
