@@ -23,7 +23,7 @@ Tesfaye Robelle - Software Engineer
 
 ## Link
 
-- Live Site URL: [e-cart](https://master.d1p994hz5fex3u.amplifyapp.com/)
+  Live Site URL:[e-cart]() ](https://master.d1p994hz5fex3u.amplifyapp.com/)
 
 ## The process
 
@@ -37,7 +37,7 @@ Tesfaye Robelle - Software Engineer
   - TypeScript
   - Semantic HTML5
   - Bootstrap, react-bootstrap
-  - [React Router](https://reactrouter.com/)
+  - React Router
   - [React Hooks]
   - Firebase
   - MongoDB
