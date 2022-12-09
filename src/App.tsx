@@ -1,8 +1,4 @@
-import { Routes, Route } from "react-router-dom";
-import { Container } from "react-bootstrap";
-import { Home } from "./pages/Home";
-import { Store } from "./pages/Store";
-import { About } from "./pages/About";
+import { Outlet } from "react-router-dom";
 import { Navbar } from "./cmp/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
@@ -10,15 +6,12 @@ function App() {
   return (
     <ShoppingCartProvider>
       <Navbar />
-      <Container className="mb-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Container>
+      <Outlet />
     </ShoppingCartProvider>
   );
 }
 
 export default App;
+
+// src. https://www.youtube.com/watch?v=lATafp15HWA&t=26s
+// https://github.com/WebDevSimplified/react-ts-shopping-cart
