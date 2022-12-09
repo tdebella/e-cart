@@ -43,6 +43,6 @@ Live Site URL:[e-cart]() ](https://master.d1p994hz5fex3u.amplifyapp.com/)
   - AWS Amplify for hosting/deployment
 
 - Lessons learned:
-  - I conducted research and picked technologies to build the app.
-  - I consulted team members and the lead , which is a great experience. I took the opportunity to learn some new tools.
+  - I conducted research and picked technologies to build the e-commerce website with React and typeScript.
+  - I consulted team members and the lead , which is a great experience and I took the opportunity to learn some new tools.
   - I learnt more how to collaborate & use the git/github.com (code push/pull, resolved merge conflict, etc...) while building the project.
