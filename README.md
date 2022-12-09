@@ -2,7 +2,7 @@
 
 # e-cart
 
-I used ReactJS, TypeScript, and Bootstrap to design and build this e-commerce website /project for the purpose of practicing React and TypeScript. <br />
+To design & build the shopping cart(e-commerce website), I used ReactJS, TypeScript, and react-bootstrap <br /> for the purpose of practicing React and TypeScript.
 
 ## Author
 
@@ -23,7 +23,7 @@ Tesfaye Robelle - Software Engineer
 
 ## Link
 
-  Live Site URL:[e-cart]() ](https://master.d1p994hz5fex3u.amplifyapp.com/)
+Live Site URL:[e-cart]() ](https://master.d1p994hz5fex3u.amplifyapp.com/)
 
 ## The process
 
@@ -39,8 +39,8 @@ Tesfaye Robelle - Software Engineer
   - Bootstrap, react-bootstrap
   - React Router
   - [React Hooks]
-  - Firebase
-  - MongoDB
+  - Firebase (firestore, authentication)
+  - AWS Amplify for hosting/deployment
 
 - Lessons learned:
   - I conducted research and picked technologies to build the app.
