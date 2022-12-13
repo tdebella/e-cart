@@ -4,6 +4,8 @@ import { useAuth } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 
 //In react-router-dom v6 useHistory is replaced by useNavigate & history remains intact with router ('/), no need of push() method
+
+//Create Signup cmp functionality
 const Signup = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -35,7 +37,10 @@ const Signup = () => {
 
   return (
     <>
-      <Card className="mt-5 " style={{ maxWidth: 400 }}>
+      <Card
+        className="mt-5 "
+        style={{ maxWidth: 400, backgroundColor: "royalblue", color: "white" }}
+      >
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -54,8 +59,13 @@ const Signup = () => {
               <Form.Label>Password Confirmation</Form.Label>
               <Form.Control type="password" ref={passwordConfirmRef} required />
             </Form.Group>
-            <br />
-            <Button disabled={loading} className="w-100" type="submit">
+            <br /> <br />
+            <Button
+              disabled={loading}
+              className="w-100"
+              type="submit"
+              style={{ backgroundColor: "white", color: "black" }}
+            >
               Sign Up
             </Button>
           </Form>

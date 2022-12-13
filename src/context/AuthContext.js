@@ -1,14 +1,20 @@
 import React, { useContext, useState, useEffect } from "react";
 import auth from "../firebase";
 
-
-const AuthContext = React.createContext();
+// I create the CONTEXT & use it in the AuthProvider
+const AuthContext = React.createContext({
+  token: "",
+  isLoggedIn: false,
+  login: (token) => {},
+  logout: () => {},
+});
 
 export function useAuth() {
   return useContext(AuthContext);
 }
-//In order to set uo all the authentication for the app, I used the context
+//In order to setup all the authentication for the app, I use the CONTEXT because I want to allow the current user to access anywhere in the app
 export function AuthProvider({ children }) {
+  //   const [token, setToken] = useState(null);
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
 
@@ -61,8 +67,3 @@ export function AuthProvider({ children }) {
     </AuthContext.Provider>
   );
 }
-
-
-// =============================
-
-// src + auth  https://www.youtube.com/watch?v=PKwu15ldZ7k&t=952s

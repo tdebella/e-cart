@@ -12,6 +12,3 @@ function App() {
 }
 
 export default App;
-
-// src. https://www.youtube.com/watch?v=lATafp15HWA&t=26s
-// https://github.com/WebDevSimplified/react-ts-shopping-cart

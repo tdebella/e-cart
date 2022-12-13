@@ -3,6 +3,7 @@ import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 
+//Create Signup cmp functionality
 const ForgotPassword = () => {
   const emailRef = useRef();
   // const { resetPassword } = useAuth();
@@ -28,9 +29,12 @@ const ForgotPassword = () => {
 
   return (
     <>
-      <Card className="mt-5 " style={{ maxWidth: 400 }}>
+      <Card
+        className="mt-5 "
+        style={{ maxWidth: 400, backgroundColor: "royalblue", color: "white" }}
+      >
         <Card.Body>
-          <h2 className="text-center mb-4">Password Reset</h2>
+          <h2 className="text-center mb-4">Password Reset</h2> <br />
           {error && <Alert variant="danger">{error}</Alert>}
           {message && <Alert variant="success">{message}</Alert>}
           <Form onSubmit={handleSubmit}>
@@ -38,8 +42,13 @@ const ForgotPassword = () => {
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" ref={emailRef} required />
             </Form.Group>
-            <br />
-            <Button disabled={loading} className="w-100" type="submit">
+            <br /> <br />
+            <Button
+              disabled={loading}
+              className="w-100"
+              type="submit"
+              style={{ backgroundColor: "white", color: "black" }}
+            >
               Reset Password
             </Button>
           </Form>
