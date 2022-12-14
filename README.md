@@ -31,18 +31,15 @@ Live Site URL:[e-cart]() ](https://master.d1p994hz5fex3u.amplifyapp.com/)
 
 - I used hooks for the state management, and Firebase for the authentication.
 
-- The e-cart a shopping cart built using
+- The e-cart shopping cart built using Semantic HTML5, ReactJS and TypeScript
 
-  - ReactJS
-  - TypeScript
-  - Semantic HTML5
-  - Bootstrap, react-bootstrap
-  - React Router
-  - [React Hooks]
-  - Firebase (firestore, authentication)
-  - AWS Amplify for hosting/deployment
+  -  styling: Bootstrap, react-bootstrap
+  -  routing across pages: react-router-dom
+  -  stae management: react-hooks
+  -  authentication and db: firebase (firestore, authentication)
+  -  Deployment/hosting: AWS Amplify 
 
 - Lessons learned:
-  - I conducted research and picked technologies to build the app.
-  - I consulted team members and the lead , which is a great experience. I took the opportunity to learn some new tools.
+  - I conducted research and picked technologies to build the e-commerce website with React and typeScript.
+  - I consulted team members and the lead , which is a great experience and I took the opportunity to learn some new tools.
   - I learnt more how to collaborate & use the git/github.com (code push/pull, resolved merge conflict, etc...) while building the project.
