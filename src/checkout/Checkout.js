@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Order from "../order/Order";
 
 function Checkout() {
-  const history = useNavigate();
+  const navigate = useNavigate();
   const [cartItems, setCartItems] = useState([]);
   const [checkoutInput, setCheckoutInput] = useState({
     firstname: "",
@@ -36,6 +35,7 @@ function Checkout() {
       state: checkoutInput.state,
       zipcode: checkoutInput.zipcode,
     };
+    navigate("/order");
   };
 
   return (

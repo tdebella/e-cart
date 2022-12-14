@@ -9,6 +9,7 @@ import ForgotPassword from "../auth/ForgotPassword";
 import App from "../App.tsx";
 import { ShoppingCart } from "../cmp/ShoppingCart";
 import Checkout from "../checkout/Checkout";
+import Order from "../order/Order";
 import WishlistCard from "../wishlist/WishlistCard";
 import { ShoppingCartProvider } from "../context/ShoppingCartContext";
 
@@ -33,6 +34,7 @@ const Router = () => {
               <Route path="/forgotpassword" element={<ForgotPassword />} />
               <Route path="/shoppingcart" element={<ShoppingCart />} />
               <Route path="/checkout" element={<Checkout />} />
+              <Route path="/order" element={<Order />} />
               <Route path="/wishlistcard" element={<WishlistCard />} />
             </Route>
           </Routes>
