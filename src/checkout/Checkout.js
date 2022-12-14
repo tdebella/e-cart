@@ -1,43 +1,42 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import swal from "sweetalert";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Order from "../order/Order";
 
 function Checkout() {
   const history = useNavigate();
-    // if (!localStorage.getItem("auth_token")) {
-    //     history.push("/");
-    //     swal("warning", "Login to goto shoppingcart page", "error");
-    // }
-  const [loading, setLoading] = useState(true);
   const [cartItems, setCartItems] = useState([]);
+  const [checkoutInput, setCheckoutInput] = useState({
+    firstname: "",
+    lastname: "",
+    phone: "",
+    email: "",
+    address: "",
+    city: "",
+    state: "",
+    zipcode: "",
+  });
 
   var Total = 0;
 
-  //useEffect
-  useEffect(() => {
-    let isMounted = true;
+  const handleInput = (e) => {
+    e.persist();
+    setCheckoutInput({ ...checkoutInput, [e.target.name]: e.target.value });
+  };
 
-    axios.get("/api/shoppingcart").then((res) => {
-      if (isMounted) {
-        if (res.data.status === 1800) {
-          setCartItems(res.data.shoppingcart);
-          setLoading(false);
-        } else if (res.data.status === 401) {
-          history.pushState("/");
-          swal("warning", res.data.message, "error");
-        }
-      }
-    });
+  const submitOrder = (e) => {
+    e.preventDefault();
 
-    return () => {
-      isMounted = false;
+    const data = {
+      firstname: checkoutInput.firstname,
+      lastname: checkoutInput.lastname,
+      phone: checkoutInput.phone,
+      email: checkoutInput.email,
+      address: checkoutInput.address,
+      city: checkoutInput.city,
+      state: checkoutInput.state,
+      zipcode: checkoutInput.zipcode,
     };
-  }, [history]);
-
-  if (loading) {
-    return <h4>Loading Checkout...</h4>;
-  }
+  };
 
   return (
     <div>
@@ -53,7 +52,7 @@ function Checkout() {
             <div className="col-md-7">
               <div className="card">
                 <div className="card-header">
-                  <h4>basic information</h4>
+                  <h4>Basic Information</h4>
                 </div>
                 <div className="card-body">
                   <div className="row">
@@ -63,57 +62,67 @@ function Checkout() {
                         <input
                           type="text"
                           name="firstname"
+                          onChange={handleInput}
+                          value={checkoutInput.firstname}
                           className="form-control"
                         />
                       </div>
                     </div>
-
                     <div className="col-md-6">
                       <div className="form-group mb-3">
                         <label>Last Name</label>
                         <input
                           type="text"
                           name="lastname"
+                          onChange={handleInput}
+                          value={checkoutInput.lastname}
                           className="form-control"
                         />
                       </div>
                     </div>
-
                     <div className="col-md-6">
                       <div className="form-group mb-3">
                         <label>Phone Number</label>
                         <input
                           type="text"
                           name="phone"
+                          onChange={handleInput}
+                          value={checkoutInput.phone}
                           className="form-control"
                         />
                       </div>
                     </div>
-
                     <div className="col-md-6">
                       <div className="form-group mb-3">
                         <label>Email Address</label>
                         <input
                           type="text"
                           name="email"
+                          onChange={handleInput}
+                          value={checkoutInput.email}
                           className="form-control"
                         />
                       </div>
                     </div>
-
                     <div className="col-md-12">
                       <div className="form-group mb-3">
                         <label>Full Address</label>
-                        <textarea rows="3" className="form-control"></textarea>
+                        <textarea
+                          rows="3"
+                          onChange={handleInput}
+                          value={checkoutInput.address}
+                          className="form-control"
+                        ></textarea>
                       </div>
                     </div>
-
                     <div className="col-md-4">
                       <div className="form-group mb-3">
                         <label>City</label>
                         <input
                           type="text"
                           name="city"
+                          onChange={handleInput}
+                          value={checkoutInput.city}
                           className="form-control"
                         />
                       </div>
@@ -124,6 +133,8 @@ function Checkout() {
                         <input
                           type="text"
                           name="state"
+                          onChange={handleInput}
+                          value={checkoutInput.state}
                           className="form-control"
                         />
                       </div>
@@ -134,13 +145,19 @@ function Checkout() {
                         <input
                           type="text"
                           name="zipcode"
+                          onChange={handleInput}
+                          value={checkoutInput.zipcode}
                           className="form-control"
                         />
                       </div>
                     </div>
                     <div className="col-md-12">
                       <div className="form-group text-end">
-                        <button type="button" className="btn btn-primary">
+                        <button
+                          type="button"
+                          className="btn btn-primary"
+                          onClick={submitOrder}
+                        >
                           Place Order
                         </button>
                       </div>
@@ -154,18 +171,31 @@ function Checkout() {
               <table className="table table-bordered">
                 <thead>
                   <tr>
-                    <th width="50%">Product</th>
+                    <th width="50%">Item</th>
                     <th>Price</th>
                     <th>Qty</th>
                     <th>Total</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr id="5">
-                    <td>iphone 12 pro</td>
-                    <td>1800</td>
-                    <td>3</td>
-                    <td>5400</td>
+                  {cartItems.map((item, id) => {
+                    Total += item.price * item.quantity;
+                    return (
+                      <tr key={id}>
+                        <td>{item.name}</td>
+                        <td>{item.price}</td>
+                        <td>{item.quantity}</td>
+                        <td>{item.price * item.quantity}</td>
+                      </tr>
+                    );
+                  })}
+                  <tr>
+                    <td colSpan="2" className="text-end fw-bold">
+                      Grand Total
+                    </td>
+                    <td colSpan="2" className="text-end fw-bold">
+                      {Total}
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -178,16 +208,3 @@ function Checkout() {
 }
 
 export default Checkout;
-
-// swal - showing an alert: "warning" , "error" , "success" and "info".
-// Sweet Alert is a way to customize alerts in your websites. It allows you to change from a standard JS button. We can add buttons, change the color text, and even add additional alerts that change depending on user click
-
-// const SweetAlert = require("react-swal");
-// <SweetAlert
-//   isOpen={true}
-//   type="warning"
-//   confirmButtonText="Yup"
-//   cancelButtonText="Nope"
-// />;
-
-// const axios = require("axios");

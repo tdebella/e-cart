@@ -14,6 +14,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
   const item = storeItems.find((item: { id: number }) => item.id === id);
   if (item == null) return null;
 
+  //me-auto: push everything to the right end
   return (
     <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
       <img
@@ -22,7 +23,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
       />
       <div className="me-auto">
         <div>
-          {item.name}{" "}
+          {item.name}
           {quantity > 1 && (
             <span className="text-muted" style={{ fontSize: ".65rem" }}>
               {quantity}

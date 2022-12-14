@@ -4,9 +4,12 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart();
+  //openCart & cartQuantity comes from ShoppingCartContext cmp
 
+  //Inside the Nav is all the links(left) and shopping cart button(right) using svg
+  //me- emulate , bringing everything to the right margin
   return (
-    <NavbarBs sticky="top" className="bg-yellow shadow-lg mb-3">
+    <NavbarBs sticky="top" className="bg-white shadow-lg mb-3">
       <Container>
         <Nav className="me-auto">
           <Nav.Link to="/" as={NavLink}>

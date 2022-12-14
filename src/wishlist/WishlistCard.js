@@ -1,7 +1,7 @@
 // import React from "react";
-// import { currency } from "../../utilities/number";
+// import { currency } from "../cmp/utilities/number";
 // import { Link } from "react-router-dom";
-// import { PRODUCT_DETAIL_PATH } from "../../data/items.json";
+// import { items } from "../../data/items.json";
 // import { IMG } from "imgs/iph13pro.png";
 
 // type WishlistCardProps = {
@@ -11,7 +11,7 @@
 //   slug: any,
 // };
 
-// const WishlistCard = ({ name, price, img, slug }) => {
+// const WishlistCard = ({ name, price, img, id }) => {
 //   return (
 //     <div className="col-6 col-md-4">
 //       <div className="card mb-7">
@@ -40,7 +40,7 @@
 //         <div className="card-body font-weight-bold text-center">
 //           <Link
 //             className="text-body"
-//             to={generatePath(PRODUCT_DETAIL_PATH, { slug })}
+//             to={'/data', { id }}
 //           >
 //             {name}
 //           </Link>{" "}

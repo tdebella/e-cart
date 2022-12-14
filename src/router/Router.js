@@ -9,33 +9,36 @@ import ForgotPassword from "../auth/ForgotPassword";
 import App from "../App.tsx";
 import { ShoppingCart } from "../cmp/ShoppingCart";
 import Checkout from "../checkout/Checkout";
-// import WishlistCard from "../wishlist/WishlistCard";
+import WishlistCard from "../wishlist/WishlistCard";
+import { ShoppingCartProvider } from "../context/ShoppingCartContext";
 
 const Router = () => {
   return (
-    <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-    >
-      <div
-        className="w-100"
-        style={{ Width: "400px", backgroundColor: "#fffeee" }}
+    <ShoppingCartProvider>
+      <Container
+        className="d-flex align-items-center justify-content-center mb-4"
+        style={{ minHeight: "100vh" }}
       >
-        <Routes>
-          <Route path="/" element={<App />}>
-            <Route index element={<Home />} />
-            <Route path="/store" element={<Store />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/forgotpassword" element={<ForgotPassword />} />
-            <Route path="/shoppingcart" element={<ShoppingCart />} />
-            <Route path="/checkout" element={<Checkout />} />
-            {/* <Route path="/wishlistcard" element={<WishlistCard />} /> */}
-          </Route>
-        </Routes>
-      </div>
-    </Container>
+        <div
+          className="w-100"
+          style={{ Width: "400px", backgroundColor: "#fffeee" }}
+        >
+          <Routes>
+            <Route path="/" element={<App />}>
+              <Route index element={<Home />} />
+              <Route path="/store" element={<Store />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/forgotpassword" element={<ForgotPassword />} />
+              <Route path="/shoppingcart" element={<ShoppingCart />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/wishlistcard" element={<WishlistCard />} />
+            </Route>
+          </Routes>
+        </div>
+      </Container>
+    </ShoppingCartProvider>
   );
 };
 

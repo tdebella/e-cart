@@ -2,9 +2,10 @@ import { Col, Row } from "react-bootstrap";
 import { StoreItem } from "../cmp/StoreItem";
 import storeItems from "../data/items.json";
 
+//screen sizes (md, xs, lg) & num of col(2,1,3). g=gap in horizontal & vertical direction. For each of our items, I rendered a cmp inside of the col
+//...item (#25) is props (# 16-21 below)
+
 export function Store() {
-  //screen sizes (md, xs, lg) & num of col(2,1,3)
-  // g=gap in horizontal direction
   return (
     <>
       <h2> Apple Store</h2>
@@ -12,13 +13,11 @@ export function Store() {
         {storeItems.map(
           (
             item: JSX.IntrinsicAttributes & {
-              id: number; // g=gap in horizontal direction
-              // g=gap in horizontal direction
+              id: number;
               quantity: number;
               name: string;
               price: number;
               year: number;
-              // g=gap in horizontal direction
               img: string;
             }
           ) => (
