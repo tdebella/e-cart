@@ -33,13 +33,11 @@ Live Site URL:[e-cart]() ](https://master.d1p994hz5fex3u.amplifyapp.com/)
 
 - The e-cart a shopping cart built using
 
-  - ReactJS
-  - TypeScript
-  - Semantic HTML5
-  - Bootstrap, react-bootstrap
-  - React Router
-  - [React Hooks]
-  - Firebase (firestore, authentication)
+  - ReactJS & react version of typeScript: build the app(UI)
+  - Bootstrap, react-bootstrap: styling the app
+  - React Router: routing across multiple pages
+  - React hooks: state management
+  - Firebase: authentication, firestore (DB)
   - AWS Amplify for hosting/deployment
 
 - Lessons learned:
