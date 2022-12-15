@@ -21,7 +21,7 @@
 
 ## Link
 
-- Live Site URL:[e-cart]() ](https://master.d1p994hz5fex3u.amplifyapp.com/)
+- Live Site URL:[e-cart](https://master.d1p994hz5fex3u.amplifyapp.com)
 
 ## The process
 
@@ -47,10 +47,10 @@
 
 - AWS Amplify: for deploying the app(website)
 
-- Lessons learned:
+## Lessons learned:
 
-  - I learnt the importance of conducting research before started building the app
+- I learnt the importance of conducting research before started building the app
 
-  - I consulted team members and the lead and gained new experience
+- I consulted team members and the lead and gained new experience
 
-  - I learnt more about the github (a cloud-based hosting service) while building the project.
+- I learnt more about the github (a cloud-based hosting service) while building the project.
