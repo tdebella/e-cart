@@ -11,11 +11,13 @@
 * [Website](https://github.com/tdebella)
 * [Linkedin](https://www.linkedin.com/in/tesfaye-robelle-4a2b7921a/)
 
-## The Task / Challenge
+## The Tasks / Challenges
 
 - In 30 days, I built multi-pages ecommerce website using react and react version of typescript.
 
 - Using react hook for the state management was challenging. I will use Redux for future project.
+
+- Building an app or website with react and typescript together was challenging
 
 - Connecting various functionalities or features into the e-cart (this project)
 

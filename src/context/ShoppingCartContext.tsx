@@ -5,10 +5,10 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 
 //context: about the logic. I export 2 types of functions:
 // 1. custom hook called useShoppingCart: returns useContext & passing in ShoppingCartContext. I need to create this ShoppingCartContext imported from react & passed in empty object {}
-//  2. shoppingCartProvider: takes in children & re-render those children. it consists objects wrapping the children (cmp)). ReactNode is the type I give to the children property inside react
+//  2. shoppingCartProvider: takes in children & re-render those children. it consists objects wrapping the children (cmp)).
 
 type ShoppingCartProviderProps = {
-  children: ReactNode;
+  children: ReactNode; //ReactNode is the type I give to the children property inside react
 };
 
 type CartItem = {
@@ -34,7 +34,7 @@ export function useShoppingCart() {
   return useContext(ShoppingCartContext);
 }
 
-//we store all of our card info inside the useState or custom hook = useLocalStorage. This hook takes props called shopping-cart(default value)
+//I store all card info inside the useState or custom hook = useLocalStorage. This hook takes props called shopping-cart(default value)
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
