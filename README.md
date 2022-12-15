@@ -11,11 +11,9 @@
 * [Website](https://github.com/tdebella)
 * [Linkedin](https://www.linkedin.com/in/tesfaye-robelle-4a2b7921a/)
 
-### Screenshot
-
 ## The Task / Challenge
 
-- In 30 days, I created a multi-pages react and typescript shopping cart.
+- In 30 days, I created a multi-pages ecommerce website with react and react version of typescript.
 
 - Goal: to make the button work properly and practice React and TypeScript in building ecommerce website
 
@@ -30,6 +28,18 @@
 - I created the repository and installed the necessary packages such as react-router, • firebase & bootstrap.
 
 - I work on the folder structure and continue building the project
+
+  - cmp (Navbar, CartItem, ShoppingCart, StoreItem)
+  - pages (shows routes in the app, & store has the content of the app)
+  - data (data in the store is json by default)
+  - context (my entire shopping cart fit inside of the context)
+  - hooks (useLocalStorage (custom hooks), I used it to make sure that if I add sth to the cart and refresh the page it is going to stay in the cart)
+  - router (for routing all the cmp using Routes & Route)
+  - utilities (for formatting the currency)
+  - checkout
+  - wishlist
+  - order / receipt
+  - refund / return
 
 - I used Firebase for the authentication and DB(firestore), hooks for the state management and react router for routing across the pages.
 
