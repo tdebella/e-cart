@@ -2,6 +2,9 @@ import React, { useState, useRef } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../firebase/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { motion } from "framer-motion";
 
 //In react-router-dom v6 useHistory is replaced by useNavigate & history remains intact with router ('/), no need of push() method
 
@@ -14,7 +17,7 @@ const Signup = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -26,8 +29,12 @@ const Signup = () => {
     try {
       setError("");
       setLoading(true);
-      await signup(emailRef.current.value, passwordRef.current.value);
-      history("/");
+      await createUserWithEmailAndPassword(
+        auth,
+        emailRef.current.value,
+        passwordRef.current.value
+      );
+      navigate("/");
     } catch {
       setError("Failed to create an account");
     }
@@ -36,10 +43,19 @@ const Signup = () => {
   }
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 2 }}
+    >
       <Card
         className="mt-5 "
-        style={{ maxWidth: 400, backgroundColor: "royalblue", color: "white" }}
+        style={{
+          marginLeft: 400,
+          maxWidth: 400,
+          backgroundColor: "goldenrod",
+          color: "white",
+        }}
       >
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>
@@ -71,10 +87,10 @@ const Signup = () => {
           </Form>
         </Card.Body>
       </Card>
-      <div className="w-100 text-left mt-4">
+      <div className="w-100 text-center mt-4">
         Already have an account? <Link to="/login">Log In</Link>
       </div>
-    </>
+    </motion.div>
   );
 };
 

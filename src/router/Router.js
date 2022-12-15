@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { Home } from "../pages/Home";
 import { Store } from "../pages/Store";
@@ -14,6 +14,8 @@ import WishlistCard from "../wishlist/WishlistCard";
 import { ShoppingCartProvider } from "../context/ShoppingCartContext";
 
 const Router = () => {
+  //useLocation hook used for animating the routes for routing across pages
+
   return (
     <ShoppingCartProvider>
       <Container

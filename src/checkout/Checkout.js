@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Checkout() {
   const navigate = useNavigate();
@@ -39,7 +40,11 @@ function Checkout() {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 2 }}
+    >
       <div className="py-3 bg-warning">
         <div className="container">
           <h6>Home / Checkout</h6>
@@ -176,6 +181,12 @@ function Checkout() {
                     <th>Qty</th>
                     <th>Total</th>
                   </tr>
+                  <tr>
+                    <th className="fw-normal">iphone 14 pro</th>
+                    <th className="fw-normal">2500</th>
+                    <th className="fw-normal">2</th>
+                    <th>5000</th>
+                  </tr>
                 </thead>
                 <tbody>
                   {cartItems.map((item, id) => {
@@ -203,7 +214,7 @@ function Checkout() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

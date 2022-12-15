@@ -2,9 +2,9 @@
 
 # e-cart
 
-- I designed & built multipages shopping cart(e-cart) with ReactJS and react version of typeScript for the purpose of practicing React and TypeScript.
+- I built the multipages shopping cart(e-cart) with ReactJS and react version of typeScript.
 
-## Author & Designer
+## Author
 
 - Tesfaye Robelle - Software Engineer
 
@@ -17,9 +17,7 @@
 
 - In 30 days, I created a multi-pages react and typescript shopping cart.
 
-- Stretch Goals:
-
-  - I used react hooks for the state management, firebase for authentication & firestore for creating the database.
+- Goal: to make the button work properly and practice React and TypeScript in building ecommerce website
 
 ## Link
 
@@ -27,20 +25,32 @@
 
 ## The process
 
-- It took me long time to research and identify the app I build and technologies used. Then, I created the repository and installed necessary packages and libraries. <br/>
+- It took me long time to research and identify the app I'm going to build and technologies used.
 
-- I used hooks for the state management, and Firebase for the authentication and react router for routing across the pages.
+- I created the repository and installed the necessary packages such as react-router, • firebase & bootstrap.
 
-## Technoloogies used:
+- I work on the folder structure and continue building the project
+
+- I used Firebase for the authentication and DB(firestore), hooks for the state management and react router for routing across the pages.
+
+## Technologies used:
 
 - ReactJS and TypeScript: for building the User Interface (app)
-- Bootstrap, react-bootstrap: for styling
+
+- Bootstrap, react-bootstrap, and framer-motion: for styling
+
 - React-router: for routing across pages
+
 - React-hooks: for state management
+
 - Firebase: for authentication and db(firestore)
+
 - AWS Amplify: for deploying the app(website)
 
 - Lessons learned:
-  - I conducted research and picked technologies to build the e-commerce website with React and typeScript.
-  - I consulted team members and the lead , which is a great experience and I took the opportunity to learn some new tools.
-  - I learnt more how to collaborate & use the git/github.com (code push/pull, resolved merge conflict, etc...) while building the project.
+
+  - I learnt the importance of conducting research before started building the app
+
+  - I consulted team members and the lead and gained new experience
+
+  - I learnt more about the github (a cloud-based hosting service) while building the project.
