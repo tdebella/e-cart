@@ -13,15 +13,17 @@
 
 ## The Tasks / Challenges
 
-    - In 30 days, I built multi-pages ecommerce website using react and react version of typescript.
+- In 30 days, I built multi-pages ecommerce website using react and react version of typescript.
 
-    - Using react hook for the state management was challenging. I will use Redux for future project.
+- Using react hook for the state management was challenging. I will use Redux for future project.
 
-    - Building an app or website with react and typescript together was challenging
+- Building an app or website with react and typescript together was challenging
 
-    - Connecting various functionalities or features into the e-cart (this project)
+- Connecting various functionalities or features into the e-cart (this project)
 
-### Goal: to make the buttons/features work properly and practice ReactJS and TypeScript in building ecommerce website
+#### Goal:
+
+- to make the buttons/features work properly and practice ReactJS and TypeScript in building ecommerce website
 
 ## Link
 
